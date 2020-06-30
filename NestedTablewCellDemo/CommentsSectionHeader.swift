@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CommentsSectionHeader: UITableViewHeaderFooterView {
+class CommentsSectionHeader: UIView {
 
     @IBOutlet weak var labelCommnets: UILabel!
     /*
@@ -18,5 +18,13 @@ class CommentsSectionHeader: UITableViewHeaderFooterView {
         // Drawing code
     }
     */
+
+    static func loadNib() -> CommentsSectionHeader {
+        return UINib(nibName: "CommentsSectionHeader", bundle: nil).instantiate(withOwner: nil, options: nil).first as! CommentsSectionHeader
+    }
+
+    override func awakeFromNib() {
+        print("----Comments---")
+    }
 
 }

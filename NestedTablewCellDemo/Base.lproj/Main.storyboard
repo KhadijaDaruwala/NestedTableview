@@ -16,22 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jye-vU-I97">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="16F-06-A5v">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jye-vU-I97" secondAttribute="trailing" id="5mR-aI-n6l"/>
-                            <constraint firstItem="Jye-vU-I97" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EZf-RV-gsm"/>
-                            <constraint firstItem="Jye-vU-I97" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JXx-0j-ulC"/>
-                            <constraint firstAttribute="bottom" secondItem="Jye-vU-I97" secondAttribute="bottom" id="xlc-g4-dVA"/>
+                            <constraint firstItem="16F-06-A5v" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CRa-bk-aZb"/>
+                            <constraint firstItem="16F-06-A5v" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="M9d-Gf-R6W"/>
+                            <constraint firstAttribute="bottom" secondItem="16F-06-A5v" secondAttribute="bottom" id="Ycc-lD-3jJ"/>
+                            <constraint firstItem="16F-06-A5v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gD0-3y-Ks1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="tableview" destination="Jye-vU-I97" id="qWp-Xl-zDU"/>
+                        <outlet property="tableview" destination="16F-06-A5v" id="eOW-a6-wHk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
