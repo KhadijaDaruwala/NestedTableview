@@ -15,7 +15,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my post " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZr-0K-KeS">
-                    <rect key="frame" x="10" y="9.9999999999999982" width="394" height="20.333333333333329"/>
+                    <rect key="frame" x="10" y="10" width="394" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="6Ig-ZL-83x"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -24,7 +27,7 @@
             <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rZr-0K-KeS" secondAttribute="trailing" constant="10" id="85X-bM-ebS"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rZr-0K-KeS" secondAttribute="bottom" constant="10" id="ceZ-6E-Lfe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rZr-0K-KeS" secondAttribute="bottom" constant="10" id="ceZ-6E-Lfe"/>
                 <constraint firstItem="rZr-0K-KeS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="eGp-eL-ahb"/>
                 <constraint firstItem="rZr-0K-KeS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="qym-oy-qdH"/>
             </constraints>

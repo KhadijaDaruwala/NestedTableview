@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
 
+    var commentsObjArray: [CommetnObject] = [CommetnObject]()
     var commentsArray = [
         [
             "comment": "This is my first comment",
@@ -54,35 +55,63 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        let view = UINib(nibName: "TableviewHeader", bundle: .main).instantiate(withOwner: nil, options: nil).first as! TableviewHeader
+
+        for i in 0...commentsArray.count-1{
+            commentsObjArray.append(CommetnObject(commetn: commentsArray[i]))
+        }
+
+        tableview.tableHeaderView = TableviewHeader.loadNib()
+        tableview.tableHeaderView?.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 100)
         tableview.delegate = self
         tableview.dataSource = self
         tableview.register(UINib(nibName: "ReplyCommentsTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "ReplyCommentsTableViewCell")
         tableview.sectionHeaderHeight = UITableView.automaticDimension
         tableview.estimatedSectionHeaderHeight = 50
+    }
 
+    @objc func viewRepliesClicked(_ sender: AnyObject){
+        let section = sender.tag ?? 0
+        commentsObjArray[section].isExpanded = !commentsObjArray[section].isExpanded
+        self.tableview.reloadData()
+        if commentsObjArray[section].isExpanded {
+            let indexPath = IndexPath(row: 0, section: section)
+            tableview.scrollToRow(at: indexPath, at: .middle, animated: false)
+        }
     }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return commentsArray.count
+        return commentsObjArray.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        if let replies = commentsObjArray[section].replies {
+            if commentsObjArray[section].isExpanded{
+                return replies.count
+            }
+        }
+        return 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReplyCommentsTableViewCell", for: indexPath) as! ReplyCommentsTableViewCell
+
+        if let replies = commentsObjArray[indexPath.section].replies{
+            cell.labelReply.text = replies[indexPath.row]
+        }
         return cell
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
         let header = CommentsSectionHeader.loadNib()
-        header.labelCommnets.backgroundColor = UIColor.blue
+        if let comments = commentsObjArray[section].comment{
+            header.labelCommnets.text = comments
+            header.buttonViewReplies.tag = section
+            header.buttonViewReplies.addTarget(self, action: #selector(viewRepliesClicked(_:)), for: .touchUpInside)
+        }
         return header
     }
 }

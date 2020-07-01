@@ -16,6 +16,7 @@
 		8E47972024A87CA9001270CD /* TableviewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E47971F24A87CA9001270CD /* TableviewHeader.xib */; };
 		8E47972324A8E3D9001270CD /* ReplyCommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47972124A8E3D9001270CD /* ReplyCommentsTableViewCell.swift */; };
 		8E47972424A8E3D9001270CD /* ReplyCommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E47972224A8E3D9001270CD /* ReplyCommentsTableViewCell.xib */; };
+		8E5E924A24ACBCE800EC4DF7 /* CommetnObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E924924ACBCE800EC4DF7 /* CommetnObject.swift */; };
 		8EA4723A24A8FBE90032B320 /* CommentsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4723924A8FBE90032B320 /* CommentsSectionHeader.swift */; };
 		8EA4723C24A8FBFF0032B320 /* CommentsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EA4723B24A8FBFF0032B320 /* CommentsSectionHeader.xib */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		8E47971F24A87CA9001270CD /* TableviewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableviewHeader.xib; sourceTree = "<group>"; };
 		8E47972124A8E3D9001270CD /* ReplyCommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyCommentsTableViewCell.swift; sourceTree = "<group>"; };
 		8E47972224A8E3D9001270CD /* ReplyCommentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReplyCommentsTableViewCell.xib; sourceTree = "<group>"; };
+		8E5E924924ACBCE800EC4DF7 /* CommetnObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommetnObject.swift; sourceTree = "<group>"; };
 		8EA4723924A8FBE90032B320 /* CommentsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSectionHeader.swift; sourceTree = "<group>"; };
 		8EA4723B24A8FBFF0032B320 /* CommentsSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsSectionHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +77,7 @@
 				8E47971F24A87CA9001270CD /* TableviewHeader.xib */,
 				8E47972124A8E3D9001270CD /* ReplyCommentsTableViewCell.swift */,
 				8E47972224A8E3D9001270CD /* ReplyCommentsTableViewCell.xib */,
+				8E5E924924ACBCE800EC4DF7 /* CommetnObject.swift */,
 				8E47971224A87AE6001270CD /* Assets.xcassets */,
 				8E47971424A87AE6001270CD /* LaunchScreen.storyboard */,
 				8E47971724A87AE6001270CD /* Info.plist */,
@@ -158,6 +161,7 @@
 			files = (
 				8EA4723A24A8FBE90032B320 /* CommentsSectionHeader.swift in Sources */,
 				8E47972324A8E3D9001270CD /* ReplyCommentsTableViewCell.swift in Sources */,
+				8E5E924A24ACBCE800EC4DF7 /* CommetnObject.swift in Sources */,
 				8E47970E24A87AE4001270CD /* ViewController.swift in Sources */,
 				8E47971E24A87C99001270CD /* TableviewHeader.swift in Sources */,
 				8E47970A24A87AE4001270CD /* AppDelegate.swift in Sources */,

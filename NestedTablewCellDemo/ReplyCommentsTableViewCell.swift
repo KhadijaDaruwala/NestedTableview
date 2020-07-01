@@ -10,6 +10,8 @@ import UIKit
 
 class ReplyCommentsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labelReply: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

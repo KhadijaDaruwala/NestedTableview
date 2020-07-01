@@ -11,6 +11,7 @@ import UIKit
 class CommentsSectionHeader: UIView {
 
     @IBOutlet weak var labelCommnets: UILabel!
+    @IBOutlet weak var buttonViewReplies: UIButton!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -24,7 +25,6 @@ class CommentsSectionHeader: UIView {
     }
 
     override func awakeFromNib() {
-        print("----Comments---")
     }
 
 }

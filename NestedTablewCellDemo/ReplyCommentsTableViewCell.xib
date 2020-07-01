@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="afv-un-2Ob" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="HDY-ad-GKt"/>
                     <constraint firstAttribute="trailing" secondItem="afv-un-2Ob" secondAttribute="trailing" constant="5" id="ISu-ia-iyz"/>
@@ -33,6 +33,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="labelReply" destination="afv-un-2Ob" id="p1b-0d-cAX"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
         </tableViewCell>
     </objects>
