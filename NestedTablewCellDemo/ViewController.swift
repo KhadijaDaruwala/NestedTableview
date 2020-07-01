@@ -61,7 +61,6 @@ class ViewController: UIViewController {
         }
 
         tableview.tableHeaderView = TableviewHeader.loadNib()
-        tableview.tableHeaderView?.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 100)
         tableview.delegate = self
         tableview.dataSource = self
         tableview.register(UINib(nibName: "ReplyCommentsTableViewCell", bundle: nil),
@@ -69,7 +68,16 @@ class ViewController: UIViewController {
         tableview.sectionHeaderHeight = UITableView.automaticDimension
         tableview.estimatedSectionHeaderHeight = 50
     }
-
+    override func viewDidLayoutSubviews() {
+        if let tableHeaderView = tableview.tableHeaderView{
+            let ht =  tableHeaderView.systemLayoutSizeFitting(CGSize(width: UIScreen.main.bounds.size.width, height: 0)).height
+            // Only assing if ht change
+            if tableHeaderView.frame.size.height != ht {
+            tableHeaderView.frame.size.height = ht
+            tableview.tableHeaderView = tableHeaderView
+            }
+        }
+    }
     @objc func viewRepliesClicked(_ sender: AnyObject){
         let section = sender.tag ?? 0
         commentsObjArray[section].isExpanded = !commentsObjArray[section].isExpanded
