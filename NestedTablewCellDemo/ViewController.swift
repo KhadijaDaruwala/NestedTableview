@@ -68,22 +68,24 @@ class ViewController: UIViewController {
         tableview.sectionHeaderHeight = UITableView.automaticDimension
         tableview.estimatedSectionHeaderHeight = 50
     }
+
     override func viewDidLayoutSubviews() {
         if let tableHeaderView = tableview.tableHeaderView{
             let ht =  tableHeaderView.systemLayoutSizeFitting(CGSize(width: UIScreen.main.bounds.size.width, height: 0)).height
             // Only assing if ht change
             if tableHeaderView.frame.size.height != ht {
-            tableHeaderView.frame.size.height = ht
-            tableview.tableHeaderView = tableHeaderView
+                tableHeaderView.frame.size.height = ht
+                tableview.tableHeaderView = tableHeaderView
             }
         }
     }
+
     @objc func viewRepliesClicked(_ sender: AnyObject){
         let section = sender.tag ?? 0
+        let indexPath = IndexPath(row: 0, section: section)
         commentsObjArray[section].isExpanded = !commentsObjArray[section].isExpanded
         self.tableview.reloadData()
         if commentsObjArray[section].isExpanded {
-            let indexPath = IndexPath(row: 0, section: section)
             tableview.scrollToRow(at: indexPath, at: .middle, animated: false)
         }
     }
